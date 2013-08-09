@@ -1,0 +1,7 @@
+<Modules>
+  <Module PersistentId="4A344683-22D3-4AF2-8EE0-7940AE8DC519" ModuleId="DistributedServices.MainModule" />
+  <Module PersistentId="F4315098-32AD-4B7F-8869-CE58E58B58B3" ModuleId="Domain.MainModule" />
+  <Module PersistentId="C324EDCA-F080-4B3B-A1FF-D0F279DB740B" ModuleId="Infrastructure.CrossCutting.IoC" />
+  <Module PersistentId="9F50D542-E5AE-40C8-95B4-BA6CE6074FAB" ModuleId="DistributedServices.Deployment" />
+  <Module PersistentId="E7E40CC5-B742-4E50-99C6-BAB04C8F08E6" ModuleId="Domain.Core" />
+</Modules>

@@ -1,0 +1,50 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/d:DTO/f:CustomerInformation.cs" caret="0" fromTop="0" />
+    <File id="9F50D542-E5AE-40C8-95B4-BA6CE6074FAB/f:ICustomer.cs" caret="350" fromTop="12" />
+    <File id="C954C58C-854B-447E-A421-29B8C43CBC26/d:Context/f:LodgeContext.cs" caret="0" fromTop="0" />
+    <File id="9F50D542-E5AE-40C8-95B4-BA6CE6074FAB/f:Customer.svc" caret="133" fromTop="1" />
+    <File id="C954C58C-854B-447E-A421-29B8C43CBC26/d:Repositories/f:LodgeRepository.cs" caret="707" fromTop="26" />
+    <File id="ECE56A8F-FDE3-4A28-90A3-A774457A4807/f:Customer.cs" caret="129" fromTop="5" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:ICustomerRepository.cs" caret="198" fromTop="9" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:ICustomerService.cs" caret="33" fromTop="0" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="1215" fromTop="46" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.cs" caret="0" fromTop="0" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:ICustomerService.cs" caret="710" fromTop="22" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.Customer.cs" caret="434" fromTop="13" />
+    <File id="9F50D542-E5AE-40C8-95B4-BA6CE6074FAB/f:Web.config" caret="454" fromTop="13" />
+    <File id="9F50D542-E5AE-40C8-95B4-BA6CE6074FAB/f:Global.asax.cs" caret="0" fromTop="0" />
+    <File id="C324EDCA-F080-4B3B-A1FF-D0F279DB740B/f:IoCFactory.cs" caret="919" fromTop="0" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:ICustomerService.cs" caret="708" fromTop="22" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.Customer.cs" caret="553" fromTop="18" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.Customer.cs" caret="628" fromTop="21" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.Customer.cs" caret="866" fromTop="28" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.Customer.cs" caret="1091" fromTop="35" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.Customer.cs" caret="698" fromTop="23" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.Customer.cs" caret="1217" fromTop="28" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:ICustomerService.cs" caret="337" fromTop="13" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="209" fromTop="9" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="847" fromTop="33" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="283" fromTop="11" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:ICustomerRepository.cs" caret="164" fromTop="6" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:ICustomerService.cs" caret="419" fromTop="17" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:ICustomerService.cs" caret="33" fromTop="0" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="68" fromTop="2" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="416" fromTop="15" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="537" fromTop="20" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="661" fromTop="25" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="765" fromTop="30" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="932" fromTop="26" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="1056" fromTop="25" />
+    <File id="F4315098-32AD-4B7F-8869-CE58E58B58B3/d:Customer/f:CustomerService.cs" caret="1215" fromTop="31" />
+    <File id="C954C58C-854B-447E-A421-29B8C43CBC26/d:Repositories/f:LodgeRepository.cs" caret="349" fromTop="12" />
+    <File id="C954C58C-854B-447E-A421-29B8C43CBC26/d:Repositories/f:LodgeRepository.cs" caret="103" fromTop="3" />
+    <File id="C954C58C-854B-447E-A421-29B8C43CBC26/d:Repositories/f:LodgeRepository.cs" caret="1499" fromTop="30" />
+    <File id="C324EDCA-F080-4B3B-A1FF-D0F279DB740B/f:IoCFactory.cs" caret="48" fromTop="1" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.Customer.cs" caret="283" fromTop="9" />
+    <File id="4A344683-22D3-4AF2-8EE0-7940AE8DC519/f:CustomerService.Customer.cs" caret="434" fromTop="13" />
+    <File id="C324EDCA-F080-4B3B-A1FF-D0F279DB740B/f:IoCFactory.cs" caret="2960" fromTop="20" />
+  </RecentEdits>
+</RecentFiles>
