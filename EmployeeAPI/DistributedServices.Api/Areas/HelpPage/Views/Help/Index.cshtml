@@ -5,7 +5,7 @@
 @model Collection<ApiDescription>
 
 @{
-    ViewBag.Title = "PassBundler API";
+    ViewBag.Title = "Employee API";
 
     // Group APIs by controller
     ILookup<string, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor.ControllerName);
