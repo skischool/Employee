@@ -24,20 +24,27 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
                 .IsRequired()
                 .HasMaxLength(100);
 
-            this.Property(t => t.Gender)
-                .IsRequired()
-                .HasMaxLength(10);
+            //this.Property(t => t.Gender)
+            //    .IsRequired()
+            //    .HasMaxLength(10);
 
             // Table & Column Mappings
             this.ToTable("Persons");
             this.Property(t => t.LastName).HasColumnName("LastName");
             this.Property(t => t.FirstName).HasColumnName("FirstName");
             this.Property(t => t.MiddleName).HasColumnName("MiddleName");
-            this.Property(t => t.Gender).HasColumnName("Gender");
+            this.Property(t => t.GenderId).HasColumnName("GenderId");
             this.Property(t => t.DateOfBirth).HasColumnName("DateOfBirth");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.DateModified).HasColumnName("DateModified");
             this.Property(t => t.DateCreated).HasColumnName("DateCreated");
+            this.Property(t => t.GenderId).HasColumnName("GenderId");
+
+            // Relationships
+            //this.HasRequired(t => t.Gender)
+            //    .WithMany(t => t.Persons)
+            //    .HasForeignKey(d => d.GenderId);
+
         }
     }
 }

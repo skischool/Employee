@@ -52,6 +52,7 @@
     <Compile Include="Contexts\EmployeeContext.cs" />
     <Compile Include="Models\Mapping\EmployeeMap.cs" />
     <Compile Include="Models\Mapping\EmployeeTypeMap.cs" />
+    <Compile Include="Models\Mapping\GenderMap.cs" />
     <Compile Include="Models\Mapping\PersonMap.cs" />
     <Compile Include="Models\Mapping\sysdiagramMap.cs" />
     <Compile Include="Models\Mapping\EmployeeTitleMap.cs" />

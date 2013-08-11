@@ -54,6 +54,7 @@
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EmployeeTitle.cs" />
+    <Compile Include="Gender.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

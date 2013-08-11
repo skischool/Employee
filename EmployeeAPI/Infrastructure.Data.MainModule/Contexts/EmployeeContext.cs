@@ -21,6 +21,7 @@ namespace Infrastructure.Data.MainModule.Contexts
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeType> EmployeeTypes { get; set; }
         public DbSet<Person> Persons { get; set; }
+
         public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<EmployeeTitle> EmployeeTitles { get; set; }
 
@@ -29,6 +30,7 @@ namespace Infrastructure.Data.MainModule.Contexts
             modelBuilder.Configurations.Add(new EmployeeMap());
             modelBuilder.Configurations.Add(new EmployeeTypeMap());
             modelBuilder.Configurations.Add(new PersonMap());
+            modelBuilder.Configurations.Add(new GenderMap());
             modelBuilder.Configurations.Add(new sysdiagramMap());
             modelBuilder.Configurations.Add(new EmployeeTitleMap());
         }

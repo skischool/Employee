@@ -43,7 +43,7 @@ namespace DistributedServices.Api.Mappings
                 FirstName = item.FirstName,
                 MiddleName = item.MiddleName,
                 DateOfBirth = item.DateOfBirth,
-                Gender = item.Gender,
+                GenderId = item.GenderId,
                 Id = item.Id
             };
 

@@ -31,3 +31,12 @@ C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule.Tes
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\EntityFramework.SqlServer.dll
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\EntityFramework.xml
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\Infrastructure.Data.MainModule.Tests.dll.config
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\Infrastructure.Data.MainModule.Tests.dll
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\Infrastructure.Data.MainModule.Tests.pdb
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\EntityFramework.dll
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\EntityFramework.xml
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Tests\obj\Debug\Infrastructure.Data.MainModule.Tests.dll
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Tests\obj\Debug\Infrastructure.Data.MainModule.Tests.pdb

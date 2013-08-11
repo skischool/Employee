@@ -13,7 +13,7 @@ namespace Domain.MainModule.Entities
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
-        public string Gender { get; set; }
+        public int GenderId { get; set; }
         public System.DateTime DateOfBirth { get; set; }
         public int Id { get; set; }
         public Nullable<System.DateTime> DateModified { get; set; }

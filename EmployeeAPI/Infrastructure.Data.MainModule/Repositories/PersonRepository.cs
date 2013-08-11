@@ -41,7 +41,7 @@ namespace Infrastructure.Data.MainModule.Repositories
 
             itemToUpdate.DateOfBirth = item.DateOfBirth;
 
-            itemToUpdate.Gender = item.Gender;
+            itemToUpdate.GenderId = item.GenderId;
 
             _context.SaveChanges();
 

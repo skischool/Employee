@@ -41,7 +41,6 @@ C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule.Moc
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.SqlServer.dll
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.xml
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.SqlServer.xml
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\obj\Debug\Infrastructure.Data.MainModule.Mock.csprojResolveAssemblyReference.cache
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\obj\Debug\Infrastructure.Data.MainModule.Mock.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\obj\Debug\Infrastructure.Data.MainModule.Mock.pdb
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\Infrastructure.Data.MainModule.Mock.dll.config
@@ -55,3 +54,4 @@ C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\bin\De
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\Domain.MainModule.pdb
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.xml
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule.Mock\obj\Debug\Infrastructure.Data.MainModule.Mock.csprojResolveAssemblyReference.cache
