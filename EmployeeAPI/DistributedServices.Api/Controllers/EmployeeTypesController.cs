@@ -8,7 +8,6 @@ using Domain.MainModule.Entities;
 using Infrastructure.CrossCutting.IoC;
 using DistributedServices.Entities;
 using DistributedServices.Api.Mappings;
-using AttributeRouting.Web.Http;
 using Domain.MainModule.EmployeeTypes;
 
 namespace DistributedServices.Api.Controllers
@@ -26,7 +25,7 @@ namespace DistributedServices.Api.Controllers
         /// All of the items.
         /// </summary>
         /// <returns>All items.</returns>
-        [GET("api/employeetypes")]
+        //[GET("api/employeetypes")]
         public HttpResponseMessage GetAll()
         {
             var items = _service.List();
@@ -41,7 +40,6 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>Employee title.</returns>
-        [GET("api/employeetypes/{id}")]
         public HttpResponseMessage Get([FromUri]int id)
         {
             var item = _service.Get(id);
@@ -56,7 +54,6 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="item">New item to create in the given bundle.</param>
         /// <returns>The recently created item.</returns>
-        [POST("api/employeetypes")]
         public HttpResponseMessage Post([FromBody]EmployeeType item)
         {
             if (item == null)
@@ -73,11 +70,12 @@ namespace DistributedServices.Api.Controllers
         /// <param name="id">Unique identifier for the item to update.</param>
         /// <param name="item">Item to update.</param>
         /// <returns>The recently updated item.</returns>
-        [PUT("api/bundles/{bundleId}/products/{id}")]
         public HttpResponseMessage Put([FromUri]int id, [FromBody]EmployeeType item)
         {
             if (item == null)
                 return Request.CreateResponse(HttpStatusCode.OK, new EmployeeType());
+
+            item.Id = id;
 
             var itemDto = Mapper.Map(_service.Update(item));
 
@@ -89,7 +87,6 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>The recently deleted item.</returns>
-        [DELETE("api/employeeTitles/{id}")]
         public HttpResponseMessage Delete([FromUri]int id)
         {
             var itemDto = Mapper.Map(_service.Delete(id));

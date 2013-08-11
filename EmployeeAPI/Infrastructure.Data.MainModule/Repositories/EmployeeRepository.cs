@@ -22,6 +22,8 @@ namespace Infrastructure.Data.MainModule.Repositories
         {
             var addedItem = _context.Employees.Add(item);
 
+            addedItem.DateCreated = DateTime.Now;
+
             _context.SaveChanges();
 
             return addedItem;
@@ -31,7 +33,31 @@ namespace Infrastructure.Data.MainModule.Repositories
         {
             var itemToUpdate = _context.Employees.FirstOrDefault(b => b.Id == item.Id);
 
-            itemToUpdate = item;
+            itemToUpdate.ClientId = item.ClientId;
+
+            itemToUpdate.Current = item.Current;
+
+            itemToUpdate.EmployeeTypeId = item.EmployeeTypeId;
+
+            // itemToUpdate.EmployeeType = _context.EmployeeTypes.FirstOrDefault(i => i.Id == item.EmployeeTypeId);
+
+            itemToUpdate.IsLocal = item.IsLocal;
+
+            itemToUpdate.LoginId = item.LoginId;
+
+            itemToUpdate.PersonId = item.PersonId;
+
+            // itemToUpdate.Person = _context.Persons.FirstOrDefault(i => i.Id == item.PersonId);
+
+            itemToUpdate.RosterId = item.RosterId;
+
+            itemToUpdate.TitleId = item.TitleId;
+
+            // itemToUpdate.Title = _context.EmployeeTitles.FirstOrDefault(i => i.Id == item.TitleId);
+
+            itemToUpdate.Id = item.Id;
+
+            itemToUpdate.DateModified = DateTime.Now;
 
             _context.SaveChanges();
 

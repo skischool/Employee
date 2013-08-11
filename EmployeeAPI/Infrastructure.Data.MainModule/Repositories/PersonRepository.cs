@@ -22,6 +22,8 @@ namespace Infrastructure.Data.MainModule.Repositories
         {
             var addedItem = _context.Persons.Add(item);
 
+            addedItem.DateCreated = DateTime.Now;
+
             _context.SaveChanges();
 
             return addedItem;
@@ -31,7 +33,15 @@ namespace Infrastructure.Data.MainModule.Repositories
         {
             var itemToUpdate = _context.Persons.FirstOrDefault(b => b.Id == item.Id);
 
-            itemToUpdate = item;
+            itemToUpdate.FirstName = item.FirstName;
+
+            itemToUpdate.LastName = item.LastName;
+
+            itemToUpdate.MiddleName = item.MiddleName;
+
+            itemToUpdate.DateOfBirth = item.DateOfBirth;
+
+            itemToUpdate.Gender = item.Gender;
 
             _context.SaveChanges();
 

@@ -6,6 +6,7 @@ using Infrastructure.Data.MainModule.Contexts;
 using Domain.Core;
 using Domain.MainModule.Entities;
 using Domain.MainModule.EmployeeTitles;
+using System.Data.Entity;
 
 namespace Infrastructure.Data.MainModule.Repositories
 {
@@ -22,6 +23,8 @@ namespace Infrastructure.Data.MainModule.Repositories
         {
             var addedItem = _context.EmployeeTitles.Add(item);
 
+            addedItem.DateCreated = DateTime.Now;
+
             _context.SaveChanges();
 
             return addedItem;
@@ -31,7 +34,11 @@ namespace Infrastructure.Data.MainModule.Repositories
         {
             var itemToUpdate = _context.EmployeeTitles.FirstOrDefault(b => b.Id == item.Id);
 
-            itemToUpdate = item;
+            itemToUpdate.Name = item.Name;
+
+            itemToUpdate.Description = item.Description;
+
+            item.DateModified = DateTime.Now;
 
             _context.SaveChanges();
 

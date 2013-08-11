@@ -10,6 +10,9 @@ namespace DistributedServices.Api.Mappings
     {
         public static Entities.Dto.Employee Map(Employee item)
         {
+            if (item == null)
+                return new Entities.Dto.Employee();
+            
             var dto = new Entities.Dto.Employee()
             {
                 ClientId = item.ClientId,
@@ -31,12 +34,16 @@ namespace DistributedServices.Api.Mappings
 
         public static DistributedServices.Entities.Dto.Person Map(Domain.MainModule.Entities.Person item)
         {
+            if (item == null)
+                return new Entities.Dto.Person();
+            
             var dto = new Entities.Dto.Person()
             {
                 LastName = item.LastName,
                 FirstName = item.FirstName,
                 MiddleName = item.MiddleName,
                 DateOfBirth = item.DateOfBirth,
+                Gender = item.Gender,
                 Id = item.Id
             };
 
@@ -45,6 +52,9 @@ namespace DistributedServices.Api.Mappings
 
         public static DistributedServices.Entities.Dto.EmployeeTitle Map(Domain.MainModule.Entities.EmployeeTitle item)
         {
+            if (item == null)
+                return new Entities.Dto.EmployeeTitle();
+            
             var dto = new Entities.Dto.EmployeeTitle()
             {
                 Name = item.Name,
@@ -57,6 +67,9 @@ namespace DistributedServices.Api.Mappings
 
         public static DistributedServices.Entities.Dto.EmployeeType Map(Domain.MainModule.Entities.EmployeeType item)
         {
+            if (item == null)
+                return new Entities.Dto.EmployeeType();
+            
             var dto = new Entities.Dto.EmployeeType()
             {
                 Name = item.Name,

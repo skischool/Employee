@@ -8,7 +8,6 @@ using Domain.MainModule.Entities;
 using Infrastructure.CrossCutting.IoC;
 using DistributedServices.Entities;
 using DistributedServices.Api.Mappings;
-using AttributeRouting.Web.Http;
 using Domain.MainModule.EmployeeTitles;
 
 namespace DistributedServices.Api.Controllers
@@ -26,7 +25,7 @@ namespace DistributedServices.Api.Controllers
         /// All of the employee titles.
         /// </summary>
         /// <returns>All employee titles.</returns>
-        [GET("api/employeetitles")]
+        // [HttpGet("api/employeetitles")]
         public HttpResponseMessage GetAll()
         {
             var items = _service.List();
@@ -41,7 +40,7 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>Item.</returns>
-        [GET("api/employeetitles/{id}")]
+        // [HttpGet("api/employeetitles/{id}")]
         public HttpResponseMessage Get([FromUri]int id)
         {
             var item = _service.Get(id);
@@ -56,7 +55,7 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="item">New employee title to create in the given bundle.</param>
         /// <returns>The recently created employee title.</returns>
-        [POST("api/employeetitles")]
+        // [HttpPost("api/employeetitles")]
         public HttpResponseMessage Post([FromBody]EmployeeTitle item)
         {
             if (item == null)
@@ -73,11 +72,13 @@ namespace DistributedServices.Api.Controllers
         /// <param name="id">Unique identifier for the item to update.</param>
         /// <param name="item">Item to update.</param>
         /// <returns>The recently updated item.</returns>
-        [PUT("api/employeeTitles/{id}")]
+        // [HttpPut("api/employeetitles/{id}")]
         public HttpResponseMessage Put([FromUri]int id, [FromBody]EmployeeTitle item)
         {
             if (item == null)
                 return Request.CreateResponse(HttpStatusCode.OK, new EmployeeTitle());
+
+            item.Id = id;
 
             var itemDto = Mapper.Map(_service.Update(item));
 
@@ -89,7 +90,7 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>The recently deleted item.</returns>
-        [DELETE("api/employeeTitles/{id}")]
+        // [HttpDelete("api/employeetitles/{id}")]
         public HttpResponseMessage Delete([FromUri]int id)
         {
             var itemDto = Mapper.Map(_service.Delete(id));

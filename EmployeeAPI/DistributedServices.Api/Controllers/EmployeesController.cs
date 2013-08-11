@@ -8,8 +8,8 @@ using Domain.MainModule.Entities;
 using Infrastructure.CrossCutting.IoC;
 using DistributedServices.Entities;
 using DistributedServices.Api.Mappings;
-using AttributeRouting.Web.Http;
 using Domain.MainModule.Employees;
+using AttributeRouting.Web.Http;
 
 namespace DistributedServices.Api.Controllers
 {
@@ -26,7 +26,6 @@ namespace DistributedServices.Api.Controllers
         /// All of the employee titles.
         /// </summary>
         /// <returns>All employee titles.</returns>
-        [GET("api/employees")]
         public HttpResponseMessage GetAll()
         {
             var items = _service.List();
@@ -41,7 +40,7 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>Item.</returns>
-        [GET("api/employees/{id}")]
+        //[GET("api/employees/{id}")]
         public HttpResponseMessage Get([FromUri]int id)
         {
             var item = _service.Get(id);
@@ -56,11 +55,13 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="item">New employee title to create in the given bundle.</param>
         /// <returns>The recently created employee title.</returns>
-        [POST("api/employees")]
+        //[POST("api/employees")]
         public HttpResponseMessage Post([FromBody]Employee item)
         {
             if (item == null)
                 return Request.CreateResponse(HttpStatusCode.OK, new Employee());
+
+            
 
             var itemDto = Mapper.Map(_service.Add(item));
 
@@ -73,11 +74,13 @@ namespace DistributedServices.Api.Controllers
         /// <param name="id">Unique identifier for the item to update.</param>
         /// <param name="item">Item to update.</param>
         /// <returns>The recently updated item.</returns>
-        [PUT("api/employees/{id}")]
+        //[PUT("api/employees/{id}")]
         public HttpResponseMessage Put([FromUri]int id, [FromBody]Employee item)
         {
             if (item == null)
                 return Request.CreateResponse(HttpStatusCode.OK, new Employee());
+
+            item.Id = id;
 
             var itemDto = Mapper.Map(_service.Update(item));
 
@@ -89,7 +92,7 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>The recently deleted item.</returns>
-        [DELETE("api/employees/{id}")]
+        //[DELETE("api/employees/{id}")]
         public HttpResponseMessage Delete([FromUri]int id)
         {
             var itemDto = Mapper.Map(_service.Delete(id));
