@@ -166,18 +166,13 @@ C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Infrastructure.CrossCutting.IoC.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Infrastructure.CrossCutting.IoC.pdb
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Domain.Core.dll
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Domain.MainModule.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\EntityFramework.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\EntityFramework.SqlServer.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Infrastructure.Data.MainModule.dll
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Infrastructure.Data.MainModule.Mock.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Microsoft.Practices.Unity.dll
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Domain.MainModule.Entities.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Domain.Core.pdb
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Domain.MainModule.pdb
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Infrastructure.Data.MainModule.Mock.pdb
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Infrastructure.Data.MainModule.pdb
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\EntityFramework.xml
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\EntityFramework.SqlServer.xml
@@ -185,4 +180,3 @@ C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Microsoft.Practices.Unity.xml
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.CrossCutting.IoC\bin\Debug\Domain.MainModule.Entities.pdb

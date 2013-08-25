@@ -4,31 +4,30 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Domain.MainModule.Entities;
 using Infrastructure.CrossCutting.IoC;
 using DistributedServices.Entities;
 using DistributedServices.Api.Mappings;
-using Domain.MainModule.EmployeeTitles;
+using Infrastructure.Data.MainModule.Repositories;
+using Infrastructure.Data.MainModule.Models;
 
 namespace DistributedServices.Api.Controllers
 {
     public class EmployeeTitlesController : ApiController
     {
-        private readonly IEmployeeTitleService _service;
+        private readonly IEmployeeTitleRepository _service;
 
         public EmployeeTitlesController()
         {
-            _service = IoCFactory.Resolve<IEmployeeTitleService>();
+            _service = IoCFactory.Resolve<IEmployeeTitleRepository>();
         }
 
         /// <summary>
         /// All of the employee titles.
         /// </summary>
         /// <returns>All employee titles.</returns>
-        // [HttpGet("api/employeetitles")]
-        public HttpResponseMessage GetAll()
+        public HttpResponseMessage GetAll([FromUri]string clientToken)
         {
-            var items = _service.List();
+            var items = _service.List(Guid.Parse(clientToken));
 
             var itemDto = items.Select(i => Mapper.Map(i));
 
@@ -40,10 +39,11 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>Item.</returns>
-        // [HttpGet("api/employeetitles/{id}")]
-        public HttpResponseMessage Get([FromUri]int id)
+        public HttpResponseMessage Get([FromUri]int id, [FromUri]string clientToken)
         {
-            var item = _service.Get(id);
+            var item = _service.Get(id, Guid.Parse(clientToken));
+
+            item.ClientToken = Guid.Parse(clientToken);
 
             var itemDto = Mapper.Map(item);
 
@@ -55,11 +55,12 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="item">New employee title to create in the given bundle.</param>
         /// <returns>The recently created employee title.</returns>
-        // [HttpPost("api/employeetitles")]
-        public HttpResponseMessage Post([FromBody]EmployeeTitle item)
+        public HttpResponseMessage Post([FromBody]EmployeeTitle item, [FromUri]string clientToken)
         {
             if (item == null)
                 return Request.CreateResponse(HttpStatusCode.OK, new EmployeeTitle());
+
+            item.ClientToken = Guid.Parse(clientToken);
 
             var itemDto = Mapper.Map(_service.Add(item));
 
@@ -72,15 +73,14 @@ namespace DistributedServices.Api.Controllers
         /// <param name="id">Unique identifier for the item to update.</param>
         /// <param name="item">Item to update.</param>
         /// <returns>The recently updated item.</returns>
-        // [HttpPut("api/employeetitles/{id}")]
-        public HttpResponseMessage Put([FromUri]int id, [FromBody]EmployeeTitle item)
+        public HttpResponseMessage Put([FromUri]int id, [FromBody]EmployeeTitle item, [FromUri]string clientToken)
         {
             if (item == null)
                 return Request.CreateResponse(HttpStatusCode.OK, new EmployeeTitle());
 
             item.Id = id;
 
-            var itemDto = Mapper.Map(_service.Update(item));
+            var itemDto = Mapper.Map(_service.Update(item, Guid.Parse(clientToken)));
 
             return Request.CreateResponse(HttpStatusCode.OK, itemDto);
         }
@@ -90,10 +90,9 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>The recently deleted item.</returns>
-        // [HttpDelete("api/employeetitles/{id}")]
-        public HttpResponseMessage Delete([FromUri]int id)
+        public HttpResponseMessage Delete([FromUri]int id, [FromUri]string clientToken)
         {
-            var itemDto = Mapper.Map(_service.Delete(id));
+            var itemDto = Mapper.Map(_service.Delete(id, Guid.Parse(clientToken)));
 
             return Request.CreateResponse(HttpStatusCode.OK, itemDto);
         }

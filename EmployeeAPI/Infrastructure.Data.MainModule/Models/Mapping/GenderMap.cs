@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using Domain.MainModule.Entities;
 
 namespace Infrastructure.Data.MainModule.Models.Mapping
 {
@@ -27,6 +26,7 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.DateModified).HasColumnName("DateModified");
             this.Property(t => t.DateCreated).HasColumnName("DateCreated");
+            this.Property(t => t.ClientToken).HasColumnName("ClientToken");
         }
     }
 }

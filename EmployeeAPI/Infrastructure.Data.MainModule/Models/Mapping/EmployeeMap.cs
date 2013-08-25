@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using Domain.MainModule.Entities;
 
 namespace Infrastructure.Data.MainModule.Models.Mapping
 {
@@ -18,7 +17,7 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
 
             // Table & Column Mappings
             this.ToTable("Employees");
-            this.Property(t => t.ClientId).HasColumnName("ClientId");
+            this.Property(t => t.ClientToken).HasColumnName("ClientToken");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.TitleId).HasColumnName("TitleId");
             this.Property(t => t.LoginId).HasColumnName("LoginId");
@@ -31,15 +30,15 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
             this.Property(t => t.DateCreated).HasColumnName("DateCreated");
 
             // Relationships
+            this.HasRequired(t => t.EmployeeTitle)
+                .WithMany(t => t.Employees)
+                .HasForeignKey(d => d.TitleId);
             this.HasRequired(t => t.EmployeeType)
                 .WithMany(t => t.Employees)
                 .HasForeignKey(d => d.EmployeeTypeId);
             this.HasRequired(t => t.Person)
                 .WithMany(t => t.Employees)
                 .HasForeignKey(d => d.PersonId);
-            this.HasRequired(t => t.Title)
-                .WithMany(t => t.Employees)
-                .HasForeignKey(d => d.TitleId);
 
         }
     }

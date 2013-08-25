@@ -3,10 +3,6 @@ using System.Collections.Generic;
 using Microsoft.Practices.Unity;
 using System.Configuration;
 using Infrastructure.Data.MainModule.Repositories;
-using Domain.MainModule.Employees;
-using Domain.MainModule.Persons;
-using Domain.MainModule.EmployeeTypes;
-using Domain.MainModule.EmployeeTitles;
 
 namespace Infrastructure.CrossCutting.IoC
 {
@@ -80,13 +76,6 @@ namespace Infrastructure.CrossCutting.IoC
 
 
             //Register Services mappings
-            container.RegisterType<IEmployeeService, EmployeeService>(new TransientLifetimeManager());
-
-            container.RegisterType<IPersonService, PersonService>(new TransientLifetimeManager());
-
-            container.RegisterType<IEmployeeTypeService, EmployeeTypeService>(new TransientLifetimeManager());
-
-            container.RegisterType<IEmployeeTitleService, EmployeeTitleService>(new TransientLifetimeManager());
 
             //Register Repositories mappings
             container.RegisterType<IEmployeeRepository, EmployeeRepository>(new TransientLifetimeManager());

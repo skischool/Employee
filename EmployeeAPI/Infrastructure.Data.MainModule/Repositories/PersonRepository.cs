@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using Infrastructure.Data.MainModule.Models;
-using Infrastructure.Data.MainModule.Contexts;
 using Domain.Core;
-using Domain.MainModule.Entities;
-using Domain.MainModule.Persons;
 
 namespace Infrastructure.Data.MainModule.Repositories
 {
     public class PersonRepository : IPersonRepository
     {
-        private readonly EmployeeContext _context;
+        private readonly EmployeeApiContext _context;
 
         public PersonRepository()
         {
-            _context = new EmployeeContext();
+            _context = new EmployeeApiContext();
         }
 
         public Person Add(Person item)

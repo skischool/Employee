@@ -2,21 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using Infrastructure.Data.MainModule.Models;
-using Infrastructure.Data.MainModule.Contexts;
 using Domain.Core;
-using Domain.MainModule.Entities;
-using Domain.MainModule.EmployeeTypes;
 using System.Data.Entity;
 
 namespace Infrastructure.Data.MainModule.Repositories
 {
     public class EmployeeTypeRepository : IEmployeeTypeRepository
     {
-        private readonly EmployeeContext _context;
+        private readonly EmployeeApiContext _context;
 
         public EmployeeTypeRepository()
         {
-            _context = new EmployeeContext();
+            _context = new EmployeeApiContext();
         }
 
         public EmployeeType Add(EmployeeType item)
@@ -30,9 +27,9 @@ namespace Infrastructure.Data.MainModule.Repositories
             return addedItem;
         }
 
-        public EmployeeType Update(EmployeeType item)
+        public EmployeeType Update(EmployeeType item, Guid clientToken)
         {
-            var itemToUpdate = _context.EmployeeTypes.FirstOrDefault(b => b.Id == item.Id);
+            var itemToUpdate = _context.EmployeeTypes.FirstOrDefault(b => b.Id == item.Id && b.ClientToken == clientToken);
 
             itemToUpdate.Name = item.Name;
 
@@ -45,9 +42,9 @@ namespace Infrastructure.Data.MainModule.Repositories
             return itemToUpdate;
         }
 
-        public EmployeeType Delete(int id)
+        public EmployeeType Delete(int id, Guid clientToken)
         {
-            var itemToDelete = _context.EmployeeTypes.FirstOrDefault(b => b.Id == id);
+            var itemToDelete = _context.EmployeeTypes.FirstOrDefault(b => b.Id == id && b.ClientToken == clientToken);
 
             var deletedItem = _context.EmployeeTypes.Remove(itemToDelete);
 
@@ -56,16 +53,16 @@ namespace Infrastructure.Data.MainModule.Repositories
             return deletedItem;
         }
 
-        public IEnumerable<EmployeeType> List()
+        public IEnumerable<EmployeeType> List(Guid clientToken)
         {
-            var items = _context.EmployeeTypes;
+            var items = _context.EmployeeTypes.Where(e => e.ClientToken == clientToken);
 
             return items;
         }
 
-        public EmployeeType Get(int id)
+        public EmployeeType Get(int id, Guid clientToken)
         {
-            var item = _context.EmployeeTypes.ToList().FirstOrDefault(b => b.Id == id);
+            var item = _context.EmployeeTypes.ToList().FirstOrDefault(b => b.Id == id && b.ClientToken == clientToken);
 
             return item;
         }

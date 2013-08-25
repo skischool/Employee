@@ -1,14 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DistributedServices.Entities.Dto
+namespace Infrastructure.Data.MainModule.Models
 {
-    public class Employee
+    public partial class Employee
     {
-        public string ClientToken { get; set; }
+        public System.Guid ClientToken { get; set; }
         public int Id { get; set; }
         public int TitleId { get; set; }
         public int LoginId { get; set; }
@@ -17,8 +14,10 @@ namespace DistributedServices.Entities.Dto
         public bool Current { get; set; }
         public int PersonId { get; set; }
         public string RosterId { get; set; }
+        public Nullable<System.DateTime> DateModified { get; set; }
+        public System.DateTime DateCreated { get; set; }
+        public virtual EmployeeTitle EmployeeTitle { get; set; }
         public virtual EmployeeType EmployeeType { get; set; }
         public virtual Person Person { get; set; }
-        public virtual EmployeeTitle EmployeeTitle { get; set; }
     }
 }

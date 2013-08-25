@@ -68,10 +68,6 @@
       <Project>{E7E40CC5-B742-4E50-99C6-BAB04C8F08E6}</Project>
       <Name>Domain.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain.MainModule.Entities\Domain.MainModule.Entities.csproj">
-      <Project>{ECE56A8F-FDE3-4A28-90A3-A774457A4807}</Project>
-      <Name>Domain.MainModule.Entities</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

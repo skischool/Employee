@@ -49,16 +49,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexts\EmployeeContext.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeApiContext.cs" />
+    <Compile Include="Models\EmployeeTitle.cs" />
+    <Compile Include="Models\EmployeeType.cs" />
+    <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\Mapping\EmployeeMap.cs" />
     <Compile Include="Models\Mapping\EmployeeTypeMap.cs" />
     <Compile Include="Models\Mapping\GenderMap.cs" />
     <Compile Include="Models\Mapping\PersonMap.cs" />
     <Compile Include="Models\Mapping\sysdiagramMap.cs" />
     <Compile Include="Models\Mapping\EmployeeTitleMap.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\IEmployeeTitleRepository.cs" />
+    <Compile Include="Repositories\IEmployeeTypeRepository.cs" />
+    <Compile Include="Repositories\IPersonRepository.cs" />
     <Compile Include="Repositories\PersonRepository.cs" />
     <Compile Include="Repositories\EmployeeTitleRepository.cs" />
     <Compile Include="Repositories\EmployeeTypeRepository.cs" />
@@ -71,14 +80,6 @@
     <ProjectReference Include="..\Domain.Core\Domain.Core.csproj">
       <Project>{E7E40CC5-B742-4E50-99C6-BAB04C8F08E6}</Project>
       <Name>Domain.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain.MainModule.Entities\Domain.MainModule.Entities.csproj">
-      <Project>{ECE56A8F-FDE3-4A28-90A3-A774457A4807}</Project>
-      <Name>Domain.MainModule.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain.MainModule\Domain.MainModule.csproj">
-      <Project>{F4315098-32AD-4B7F-8869-CE58E58B58B3}</Project>
-      <Name>Domain.MainModule</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

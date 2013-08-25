@@ -2,21 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using Infrastructure.Data.MainModule.Models;
-using Infrastructure.Data.MainModule.Contexts;
 using Domain.Core;
-using Domain.MainModule.Entities;
-using Domain.MainModule.EmployeeTitles;
 using System.Data.Entity;
 
 namespace Infrastructure.Data.MainModule.Repositories
 {
     public class EmployeeTitleRepository : IEmployeeTitleRepository
     {
-        private readonly EmployeeContext _context;
+        private readonly EmployeeApiContext _context;
 
         public EmployeeTitleRepository()
         {
-            _context = new EmployeeContext();
+            _context = new EmployeeApiContext();
         }
 
         public EmployeeTitle Add(EmployeeTitle item)
@@ -30,9 +27,9 @@ namespace Infrastructure.Data.MainModule.Repositories
             return addedItem;
         }
 
-        public EmployeeTitle Update(EmployeeTitle item)
+        public EmployeeTitle Update(EmployeeTitle item, Guid clientToken)
         {
-            var itemToUpdate = _context.EmployeeTitles.FirstOrDefault(b => b.Id == item.Id);
+            var itemToUpdate = _context.EmployeeTitles.FirstOrDefault(b => b.Id == item.Id && b.ClientToken == clientToken);
 
             itemToUpdate.Name = item.Name;
 
@@ -45,9 +42,9 @@ namespace Infrastructure.Data.MainModule.Repositories
             return itemToUpdate;
         }
 
-        public EmployeeTitle Delete(int id)
+        public EmployeeTitle Delete(int id, Guid clientToken)
         {
-            var itemToDelete = _context.EmployeeTitles.FirstOrDefault(b => b.Id == id);
+            var itemToDelete = _context.EmployeeTitles.FirstOrDefault(b => b.Id == id && b.ClientToken == clientToken);
 
             var deletedItem = _context.EmployeeTitles.Remove(itemToDelete);
 
@@ -56,16 +53,16 @@ namespace Infrastructure.Data.MainModule.Repositories
             return deletedItem;
         }
 
-        public IEnumerable<EmployeeTitle> List()
+        public IEnumerable<EmployeeTitle> List(Guid clientToken)
         {
-            var items = _context.EmployeeTitles;
+            var items = _context.EmployeeTitles.Where(e => e.ClientToken == clientToken);
 
             return items;
         }
 
-        public EmployeeTitle Get(int id)
+        public EmployeeTitle Get(int id, Guid clientToken)
         {
-            var item = _context.EmployeeTitles.ToList().FirstOrDefault(b => b.Id == id);
+            var item = _context.EmployeeTitles.ToList().FirstOrDefault(b => b.Id == id && b.ClientToken == clientToken);
 
             return item;
         }

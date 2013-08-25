@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using Infrastructure.Data.MainModule.Models;
-using Infrastructure.Data.MainModule.Contexts;
 using Domain.Core;
-using Domain.MainModule.Entities;
-using Domain.MainModule.Employees;
 
 namespace Infrastructure.Data.MainModule.Repositories
 {
     public class EmployeeRepository : IEmployeeRepository
     {
-        private readonly EmployeeContext _context;
+        private readonly EmployeeApiContext _context;
 
         public EmployeeRepository()
         {
-            _context = new EmployeeContext();
+            _context = new EmployeeApiContext();
         }
 
         public Employee Add(Employee item)
@@ -29,17 +26,17 @@ namespace Infrastructure.Data.MainModule.Repositories
             return addedItem;
         }
 
-        public Employee Update(Employee item)
+        public Employee Update(Employee item, string clientToken)
         {
-            var itemToUpdate = _context.Employees.FirstOrDefault(b => b.Id == item.Id);
+            var guid = Guid.Parse(clientToken);
 
-            itemToUpdate.ClientId = item.ClientId;
+            var itemToUpdate = _context.Employees.FirstOrDefault(b => b.Id == item.Id && b.ClientToken == guid);
+
+            itemToUpdate.ClientToken = item.ClientToken;
 
             itemToUpdate.Current = item.Current;
 
             itemToUpdate.EmployeeTypeId = item.EmployeeTypeId;
-
-            // itemToUpdate.EmployeeType = _context.EmployeeTypes.FirstOrDefault(i => i.Id == item.EmployeeTypeId);
 
             itemToUpdate.IsLocal = item.IsLocal;
 
@@ -47,13 +44,9 @@ namespace Infrastructure.Data.MainModule.Repositories
 
             itemToUpdate.PersonId = item.PersonId;
 
-            // itemToUpdate.Person = _context.Persons.FirstOrDefault(i => i.Id == item.PersonId);
-
             itemToUpdate.RosterId = item.RosterId;
 
             itemToUpdate.TitleId = item.TitleId;
-
-            // itemToUpdate.Title = _context.EmployeeTitles.FirstOrDefault(i => i.Id == item.TitleId);
 
             itemToUpdate.Id = item.Id;
 
@@ -64,9 +57,11 @@ namespace Infrastructure.Data.MainModule.Repositories
             return itemToUpdate;
         }
 
-        public Employee Delete(int id)
+        public Employee Delete(int id, string clientToken)
         {
-            var itemToDelete = _context.Employees.FirstOrDefault(b => b.Id == id);
+            var guid = Guid.Parse(clientToken);
+
+            var itemToDelete = _context.Employees.FirstOrDefault(b => b.Id == id && b.ClientToken == guid);
 
             var deletedItem = _context.Employees.Remove(itemToDelete);
 
@@ -75,16 +70,20 @@ namespace Infrastructure.Data.MainModule.Repositories
             return deletedItem;
         }
 
-        public IEnumerable<Employee> List()
+        public IEnumerable<Employee> List(string clientToken)
         {
-            var items = _context.Employees;
+            var guid = Guid.Parse(clientToken);
+
+            var items = _context.Employees.Where(e => e.ClientToken == guid);
 
             return items;
         }
 
-        public Employee Get(int id)
+        public Employee Get(int id, string clientToken)
         {
-            var item = _context.Employees.ToList().FirstOrDefault(b => b.Id == id);
+            var guid = Guid.Parse(clientToken);
+
+            var item = _context.Employees.ToList().FirstOrDefault(b => b.Id == id && b.ClientToken == guid);
 
             return item;
         }

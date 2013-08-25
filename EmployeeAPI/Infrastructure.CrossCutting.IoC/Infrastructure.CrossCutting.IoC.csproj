@@ -74,14 +74,6 @@
       <Project>{E7E40CC5-B742-4E50-99C6-BAB04C8F08E6}</Project>
       <Name>Domain.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain.MainModule\Domain.MainModule.csproj">
-      <Project>{F4315098-32AD-4B7F-8869-CE58E58B58B3}</Project>
-      <Name>Domain.MainModule</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Infrastructure.Data.MainModule.Mock\Infrastructure.Data.MainModule.Mock.csproj">
-      <Project>{b334fed2-9527-4e36-9851-8794d92eeeec}</Project>
-      <Name>Infrastructure.Data.MainModule.Mock</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Infrastructure.Data.MainModule\Infrastructure.Data.MainModule.csproj">
       <Project>{C954C58C-854B-447E-A421-29B8C43CBC26}</Project>
       <Name>Infrastructure.Data.MainModule</Name>

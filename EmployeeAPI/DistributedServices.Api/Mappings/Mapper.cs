@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Domain.MainModule.Entities;
+using Infrastructure.Data.MainModule.Models;
 
 namespace DistributedServices.Api.Mappings
 {
@@ -15,7 +15,7 @@ namespace DistributedServices.Api.Mappings
             
             var dto = new Entities.Dto.Employee()
             {
-                ClientId = item.ClientId,
+                ClientToken = item.ClientToken.ToString(),
                 Id = item.Id,
                 TitleId = item.TitleId,
                 LoginId = item.LoginId,
@@ -26,13 +26,13 @@ namespace DistributedServices.Api.Mappings
                 RosterId = item.RosterId,
                 EmployeeType = Mapper.Map(item.EmployeeType),
                 Person = Mapper.Map(item.Person),
-                Title = Mapper.Map(item.Title)
+                EmployeeTitle = Mapper.Map(item.EmployeeTitle)
             };
 
             return dto;
         }
 
-        public static DistributedServices.Entities.Dto.Person Map(Domain.MainModule.Entities.Person item)
+        public static DistributedServices.Entities.Dto.Person Map(Person item)
         {
             if (item == null)
                 return new Entities.Dto.Person();
@@ -50,7 +50,7 @@ namespace DistributedServices.Api.Mappings
             return dto;
         }
 
-        public static DistributedServices.Entities.Dto.EmployeeTitle Map(Domain.MainModule.Entities.EmployeeTitle item)
+        public static DistributedServices.Entities.Dto.EmployeeTitle Map(EmployeeTitle item)
         {
             if (item == null)
                 return new Entities.Dto.EmployeeTitle();
@@ -65,7 +65,7 @@ namespace DistributedServices.Api.Mappings
             return dto;
         }
 
-        public static DistributedServices.Entities.Dto.EmployeeType Map(Domain.MainModule.Entities.EmployeeType item)
+        public static DistributedServices.Entities.Dto.EmployeeType Map(EmployeeType item)
         {
             if (item == null)
                 return new Entities.Dto.EmployeeType();

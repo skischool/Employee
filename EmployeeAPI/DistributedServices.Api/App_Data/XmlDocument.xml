@@ -396,27 +396,27 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeesController.GetAll">
+        <member name="M:DistributedServices.Api.Controllers.EmployeesController.GetAll(System.String)">
             <summary>
             All of the employee titles.
             </summary>
             <returns>All employee titles.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Get(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Get(System.Int32,System.String)">
             <summary>
             A item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>Item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Post(Domain.MainModule.Entities.Employee)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Post(Infrastructure.Data.MainModule.Models.Employee,System.String)">
             <summary>
             Creates a new employee title.
             </summary>
             <param name="item">New employee title to create in the given bundle.</param>
             <returns>The recently created employee title.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Put(System.Int32,Domain.MainModule.Entities.Employee)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Put(System.Int32,System.String,Infrastructure.Data.MainModule.Models.Employee)">
             <summary>
             Updates an existing item.
             </summary>
@@ -424,34 +424,34 @@
             <param name="item">Item to update.</param>
             <returns>The recently updated item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Delete(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Delete(System.Int32,System.String)">
             <summary>
             Deletes an existing item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>The recently deleted item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PeopleController.GetAll">
+        <member name="M:DistributedServices.Api.Controllers.PeopleController.GetAll(System.String)">
             <summary>
             All of the employee titles.
             </summary>
             <returns>All employee titles.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PeopleController.Get(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.PeopleController.Get(System.Int32,System.String)">
             <summary>
             A item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>Item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PeopleController.Post(Domain.MainModule.Entities.Person)">
+        <member name="M:DistributedServices.Api.Controllers.PeopleController.Post(Infrastructure.Data.MainModule.Models.Person,System.String)">
             <summary>
             Creates a new employee title.
             </summary>
             <param name="item">New employee title to create in the given bundle.</param>
             <returns>The recently created employee title.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PeopleController.Put(System.Int32,Domain.MainModule.Entities.Person)">
+        <member name="M:DistributedServices.Api.Controllers.PeopleController.Put(System.Int32,Infrastructure.Data.MainModule.Models.Person,System.String)">
             <summary>
             Updates an existing item.
             </summary>
@@ -459,34 +459,34 @@
             <param name="item">Item to update.</param>
             <returns>The recently updated item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.PeopleController.Delete(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.PeopleController.Delete(System.Int32,System.String)">
             <summary>
             Deletes an existing item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>The recently deleted item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.GetAll">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.GetAll(System.String)">
             <summary>
             All of the items.
             </summary>
             <returns>All items.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.Get(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.Get(System.Int32,System.String)">
             <summary>
             A item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>Employee title.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.Post(Domain.MainModule.Entities.EmployeeType)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.Post(Infrastructure.Data.MainModule.Models.EmployeeType,System.String)">
             <summary>
             Creates a new item.
             </summary>
             <param name="item">New item to create in the given bundle.</param>
             <returns>The recently created item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.Put(System.Int32,Domain.MainModule.Entities.EmployeeType)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.Put(System.Int32,Infrastructure.Data.MainModule.Models.EmployeeType,System.String)">
             <summary>
             Updates an existing item.
             </summary>
@@ -494,34 +494,34 @@
             <param name="item">Item to update.</param>
             <returns>The recently updated item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.Delete(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTypesController.Delete(System.Int32,System.String)">
             <summary>
             Deletes an existing item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>The recently deleted item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.GetAll">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.GetAll(System.String)">
             <summary>
             All of the employee titles.
             </summary>
             <returns>All employee titles.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.Get(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.Get(System.Int32,System.String)">
             <summary>
             A item.
             </summary>
             <param name="id">Unique identifier for an item.</param>
             <returns>Item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.Post(Domain.MainModule.Entities.EmployeeTitle)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.Post(Infrastructure.Data.MainModule.Models.EmployeeTitle,System.String)">
             <summary>
             Creates a new employee title.
             </summary>
             <param name="item">New employee title to create in the given bundle.</param>
             <returns>The recently created employee title.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.Put(System.Int32,Domain.MainModule.Entities.EmployeeTitle)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.Put(System.Int32,Infrastructure.Data.MainModule.Models.EmployeeTitle,System.String)">
             <summary>
             Updates an existing item.
             </summary>
@@ -529,7 +529,7 @@
             <param name="item">Item to update.</param>
             <returns>The recently updated item.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.Delete(System.Int32)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeeTitlesController.Delete(System.Int32,System.String)">
             <summary>
             Deletes an existing item.
             </summary>
