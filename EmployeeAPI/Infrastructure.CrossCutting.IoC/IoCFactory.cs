@@ -86,6 +86,8 @@ namespace Infrastructure.CrossCutting.IoC
 
             container.RegisterType<IEmployeeTitleRepository, EmployeeTitleRepository>(new TransientLifetimeManager());
 
+            container.RegisterType<IGenderRepository, GenderRepository>(new TransientLifetimeManager());
+
             //Register crosscuting mappings
             // container.RegisterType<ITraceManager, TraceManager>(new TransientLifetimeManager());
 

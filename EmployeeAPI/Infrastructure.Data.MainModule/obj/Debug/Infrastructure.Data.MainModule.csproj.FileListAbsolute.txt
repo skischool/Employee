@@ -98,9 +98,6 @@ C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule\bin
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule\bin\Debug\EntityFramework.xml
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule\bin\Debug\EntityFramework.SqlServer.dll
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\Infrastructure.Data.MainModule\bin\Debug\EntityFramework.SqlServer.xml
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\obj\Debug\Infrastructure.Data.MainModule.csprojResolveAssemblyReference.cache
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\obj\Debug\Infrastructure.Data.MainModule.dll
-C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\obj\Debug\Infrastructure.Data.MainModule.pdb
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\bin\Debug\Infrastructure.Data.MainModule.dll.config
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\bin\Debug\Infrastructure.Data.MainModule.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\bin\Debug\Infrastructure.Data.MainModule.pdb
@@ -110,3 +107,6 @@ C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\bin\Debug\E
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\bin\Debug\Domain.Core.pdb
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\bin\Debug\EntityFramework.xml
 C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\obj\Debug\Infrastructure.Data.MainModule.csprojResolveAssemblyReference.cache
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\obj\Debug\Infrastructure.Data.MainModule.dll
+C:\Git\SkiSchool\Employee\EmployeeAPI\Infrastructure.Data.MainModule\obj\Debug\Infrastructure.Data.MainModule.pdb

@@ -79,5 +79,20 @@ namespace DistributedServices.Api.Mappings
 
             return dto;
         }
+
+        public static DistributedServices.Entities.Dto.Gender Map(Gender item)
+        {
+            if (item == null)
+                return new Entities.Dto.Gender();
+
+            var dto = new Entities.Dto.Gender()
+            {
+                Name = item.Name,
+                Description = item.Description,
+                Id = item.Id
+            };
+
+            return dto;
+        }
     }
 }

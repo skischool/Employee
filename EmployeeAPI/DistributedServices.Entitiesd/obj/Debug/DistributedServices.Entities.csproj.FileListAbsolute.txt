@@ -4,6 +4,5 @@ C:\Git\Passbundler\Passbundler\PassbundlerAPI\DistributedServices.Entitiesd\obj\
 C:\Git\Passbundler\Passbundler\PassbundlerAPI\DistributedServices.Entitiesd\obj\Debug\DistributedServices.Entities.pdb
 C:\Git\SkiSchool\Employee\EmployeeAPI\DistributedServices.Entitiesd\bin\Debug\DistributedServices.Entities.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\DistributedServices.Entitiesd\bin\Debug\DistributedServices.Entities.pdb
-C:\Git\SkiSchool\Employee\EmployeeAPI\DistributedServices.Entitiesd\obj\Debug\DistributedServices.Entities.csprojResolveAssemblyReference.cache
 C:\Git\SkiSchool\Employee\EmployeeAPI\DistributedServices.Entitiesd\obj\Debug\DistributedServices.Entities.dll
 C:\Git\SkiSchool\Employee\EmployeeAPI\DistributedServices.Entitiesd\obj\Debug\DistributedServices.Entities.pdb

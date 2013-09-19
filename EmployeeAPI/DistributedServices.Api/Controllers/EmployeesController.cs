@@ -61,7 +61,7 @@ namespace DistributedServices.Api.Controllers
 
             
 
-            var itemDto = Mapper.Map(_service.Add(item));
+            var itemDto = Mapper.Map(_service.Add(item, clientToken));
 
             return Request.CreateResponse(HttpStatusCode.OK, itemDto);
         }

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\Gender.cs" />
     <Compile Include="Dto\Employee.cs" />
     <Compile Include="Dto\EmployeeTitle.cs" />
     <Compile Include="Dto\EmployeeType.cs" />

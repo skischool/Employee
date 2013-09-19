@@ -396,6 +396,41 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:DistributedServices.Api.Controllers.GendersController.GetAll(System.String)">
+            <summary>
+            All of the genders.
+            </summary>
+            <returns>All genders.</returns>
+        </member>
+        <member name="M:DistributedServices.Api.Controllers.GendersController.Get(System.Int32,System.String)">
+            <summary>
+            A item.
+            </summary>
+            <param name="id">Unique identifier for an item.</param>
+            <returns>Item.</returns>
+        </member>
+        <member name="M:DistributedServices.Api.Controllers.GendersController.Post(Infrastructure.Data.MainModule.Models.Gender,System.String)">
+            <summary>
+            Creates a new employee title.
+            </summary>
+            <param name="item">New employee title to create in the given bundle.</param>
+            <returns>The recently created employee title.</returns>
+        </member>
+        <member name="M:DistributedServices.Api.Controllers.GendersController.Put(System.Int32,Infrastructure.Data.MainModule.Models.Gender,System.String)">
+            <summary>
+            Updates an existing item.
+            </summary>
+            <param name="id">Unique identifier for the item to update.</param>
+            <param name="item">Item to update.</param>
+            <returns>The recently updated item.</returns>
+        </member>
+        <member name="M:DistributedServices.Api.Controllers.GendersController.Delete(System.Int32,System.String)">
+            <summary>
+            Deletes an existing item.
+            </summary>
+            <param name="id">Unique identifier for an item.</param>
+            <returns>The recently deleted item.</returns>
+        </member>
         <member name="M:DistributedServices.Api.Controllers.EmployeesController.GetAll(System.String)">
             <summary>
             All of the employee titles.

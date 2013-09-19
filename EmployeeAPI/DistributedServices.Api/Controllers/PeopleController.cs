@@ -58,6 +58,8 @@ namespace DistributedServices.Api.Controllers
             if (item == null)
                 return Request.CreateResponse(HttpStatusCode.OK, new Person());
 
+            item.ClientToken = Guid.Parse(clientToken);
+
             var itemDto = Mapper.Map(_service.Add(item));
 
             return Request.CreateResponse(HttpStatusCode.OK, itemDto);

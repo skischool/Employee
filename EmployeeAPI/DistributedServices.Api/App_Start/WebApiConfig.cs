@@ -23,6 +23,8 @@ namespace DistributedServices.Api
             EmployeeTitleRoutes(config);
 
             EmployeeTypeRoutes(config);
+
+            GenderRoutes(config);
         }
 
         private static void PeopleRoutes(HttpConfiguration config)
@@ -135,6 +137,44 @@ namespace DistributedServices.Api
                 name: "EmployeeTypeDelete",
                 routeTemplate: "api/employeetypes/{id}",
                 defaults: new { controller = "EmployeeTypes", action = "Delete" },
+                constraints: new { httpMethod = new HttpMethodConstraint("DELETE") }
+                );
+        }
+
+        private static void GenderRoutes(HttpConfiguration config)
+        {
+            config.Routes.MapHttpRoute(
+                name: "GenderGetAll",
+                routeTemplate: "api/genders",
+                defaults: new { controller = "Genders", action = "GetAll" },
+                constraints: new { httpMethod = new HttpMethodConstraint("GET") }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "GenderGet",
+                routeTemplate: "api/genders/{id}",
+                defaults: new { controller = "Genders", action = "Get" },
+                constraints: new { httpMethod = new HttpMethodConstraint("GET") }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "GenderPost",
+                routeTemplate: "api/genders",
+                defaults: new { controller = "Genders", action = "Post" },
+                constraints: new { httpMethod = new HttpMethodConstraint("POST") }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "GenderPut",
+                routeTemplate: "api/genders/{id}",
+                defaults: new { controller = "Genders", action = "Put" },
+                constraints: new { httpMethod = new HttpMethodConstraint("PUT") }
+                );
+
+            config.Routes.MapHttpRoute(
+                name: "GenderDelete",
+                routeTemplate: "api/genders/{id}",
+                defaults: new { controller = "Genders", action = "Delete" },
                 constraints: new { httpMethod = new HttpMethodConstraint("DELETE") }
                 );
         }

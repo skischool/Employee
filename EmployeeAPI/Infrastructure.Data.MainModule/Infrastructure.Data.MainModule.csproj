@@ -63,6 +63,8 @@
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GenderRepository.cs" />
+    <Compile Include="Repositories\IGenderRepository.cs" />
     <Compile Include="Repositories\EmployeeRepository.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />
     <Compile Include="Repositories\IEmployeeTitleRepository.cs" />

@@ -15,8 +15,12 @@ namespace Infrastructure.Data.MainModule.Repositories
             _context = new EmployeeApiContext();
         }
 
-        public Employee Add(Employee item)
+        public Employee Add(Employee item, string clientToken)
         {
+            var guid = Guid.Parse(clientToken);
+
+            item.ClientToken = guid;
+            
             var addedItem = _context.Employees.Add(item);
 
             addedItem.DateCreated = DateTime.Now;
