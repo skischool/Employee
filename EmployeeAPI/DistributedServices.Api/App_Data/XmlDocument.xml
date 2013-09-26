@@ -437,7 +437,7 @@
             </summary>
             <returns>All employee titles.</returns>
         </member>
-        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Get(System.Int32,System.String)">
+        <member name="M:DistributedServices.Api.Controllers.EmployeesController.Get(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
             <summary>
             A item.
             </summary>

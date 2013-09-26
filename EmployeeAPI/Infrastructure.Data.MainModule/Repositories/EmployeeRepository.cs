@@ -91,5 +91,14 @@ namespace Infrastructure.Data.MainModule.Repositories
 
             return item;
         }
+
+        public Employee GetByLoginId(int loginId, string clientToken)
+        {
+            var guid = Guid.Parse(clientToken);
+
+            var item = _context.Employees.FirstOrDefault(e => e.LoginId == loginId && e.ClientToken == guid);
+
+            return item;
+        }
     }
 }

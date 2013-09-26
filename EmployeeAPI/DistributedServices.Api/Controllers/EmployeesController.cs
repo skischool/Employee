@@ -40,9 +40,11 @@ namespace DistributedServices.Api.Controllers
         /// </summary>
         /// <param name="id">Unique identifier for an item.</param>
         /// <returns>Item.</returns>
-        public HttpResponseMessage Get([FromUri]int id, [FromUri]string clientToken)
+        public HttpResponseMessage Get([FromUri]int? id, [FromUri]int? loginId, [FromUri]string clientToken)
         {
-            var item = _service.Get(id, clientToken);
+            var item = loginId != null ? 
+                _service.GetByLoginId(int.Parse(loginId.ToString()), clientToken) :
+                _service.Get(int.Parse(id.ToString()), clientToken);
 
             var itemDto = Mapper.Map(item);
 
