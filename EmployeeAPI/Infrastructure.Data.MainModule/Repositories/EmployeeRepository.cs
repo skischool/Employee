@@ -40,17 +40,17 @@ namespace Infrastructure.Data.MainModule.Repositories
 
             itemToUpdate.Current = item.Current;
 
-            itemToUpdate.EmployeeTypeId = item.EmployeeTypeId;
+            itemToUpdate.EmployeeTypeId = item.EmployeeType.Id;
 
             itemToUpdate.IsLocal = item.IsLocal;
 
             itemToUpdate.LoginId = item.LoginId;
 
-            itemToUpdate.PersonId = item.PersonId;
+            itemToUpdate.PersonId = item.Person.Id;
 
             itemToUpdate.RosterId = item.RosterId;
 
-            itemToUpdate.TitleId = item.TitleId;
+            itemToUpdate.TitleId = item.EmployeeTitle.Id;
 
             itemToUpdate.Id = item.Id;
 
