@@ -20,7 +20,7 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
                 .HasMaxLength(100);
 
             this.Property(t => t.MiddleName)
-                .IsRequired()
+                //.IsRequired()
                 .HasMaxLength(100);
 
             // Table & Column Mappings
