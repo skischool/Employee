@@ -12,6 +12,7 @@ namespace DistributedServices.Entities.Dto
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public int GenderId { get; set; }
+        public Gender Gender { get; set; }
         public System.DateTime DateOfBirth { get; set; }
         public int Id { get; set; }
     }

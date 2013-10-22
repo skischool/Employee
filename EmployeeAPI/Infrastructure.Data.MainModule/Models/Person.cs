@@ -19,6 +19,8 @@ namespace Infrastructure.Data.MainModule.Models
         public System.DateTime DateCreated { get; set; }
         public int GenderId { get; set; }
         public System.Guid ClientToken { get; set; }
+        public Nullable<int> PersonId { get; set; }
+        public string MaritalStatus { get; set; }
         public virtual ICollection<Employee> Employees { get; set; }
         public virtual Gender Gender { get; set; }
     }

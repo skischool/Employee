@@ -20,8 +20,11 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
                 .HasMaxLength(100);
 
             this.Property(t => t.MiddleName)
-                //.IsRequired()
                 .HasMaxLength(100);
+
+            this.Property(t => t.MaritalStatus)
+                .IsFixedLength()
+                .HasMaxLength(1);
 
             // Table & Column Mappings
             this.ToTable("Persons");
@@ -34,6 +37,8 @@ namespace Infrastructure.Data.MainModule.Models.Mapping
             this.Property(t => t.DateCreated).HasColumnName("DateCreated");
             this.Property(t => t.GenderId).HasColumnName("GenderId");
             this.Property(t => t.ClientToken).HasColumnName("ClientToken");
+            this.Property(t => t.PersonId).HasColumnName("PersonId");
+            this.Property(t => t.MaritalStatus).HasColumnName("MaritalStatus");
 
             // Relationships
             this.HasRequired(t => t.Gender)

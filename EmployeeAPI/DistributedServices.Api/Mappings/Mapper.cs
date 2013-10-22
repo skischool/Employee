@@ -26,7 +26,7 @@ namespace DistributedServices.Api.Mappings
                 RosterId = item.RosterId,
                 EmployeeType = Mapper.Map(item.EmployeeType),
                 Person = Mapper.Map(item.Person),
-                EmployeeTitle = Mapper.Map(item.EmployeeTitle)
+                EmployeeTitle = Mapper.Map(item.EmployeeTitle) 
             };
 
             return dto;
@@ -44,6 +44,7 @@ namespace DistributedServices.Api.Mappings
                 MiddleName = item.MiddleName,
                 DateOfBirth = item.DateOfBirth,
                 GenderId = item.GenderId,
+                Gender = Mapper.Map(item.Gender),
                 Id = item.Id
             };
 

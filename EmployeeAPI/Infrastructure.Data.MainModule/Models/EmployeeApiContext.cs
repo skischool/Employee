@@ -21,7 +21,6 @@ namespace Infrastructure.Data.MainModule.Models
         public DbSet<EmployeeType> EmployeeTypes { get; set; }
         public DbSet<Gender> Genders { get; set; }
         public DbSet<Person> Persons { get; set; }
-        public DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -30,7 +29,6 @@ namespace Infrastructure.Data.MainModule.Models
             modelBuilder.Configurations.Add(new EmployeeTypeMap());
             modelBuilder.Configurations.Add(new GenderMap());
             modelBuilder.Configurations.Add(new PersonMap());
-            modelBuilder.Configurations.Add(new sysdiagramMap());
         }
     }
 }
