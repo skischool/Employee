@@ -49,7 +49,7 @@ namespace Infrastructure.Data.MainModule.Repositories
 
             personToUpdate.DateModified = DateTime.Now;
 
-            personToUpdate.GenderId = item.Person.GenderId;
+            personToUpdate.GenderId = item.Person.Gender.Id;
 
             _context.SaveChanges();
 
